@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Skillvanto Team Guide</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f5f5f5; }
+  
+  /* NAV */
+  .nav { background: #1B6B7B; padding: 0; position: sticky; top: 0; z-index: 100; display: flex; overflow-x: auto; }
+  .nav a { color: white; text-decoration: none; padding: 14px 18px; font-size: 13px; font-weight: bold; white-space: nowrap; }
+  .nav a:hover { background: rgba(255,255,255,0.15); }
+
+  /* HEADER */
+  .header { background: #1B6B7B; color: white; padding: 30px 20px 20px; text-align: center; }
+  .header h1 { font-size: 24px; margin-bottom: 6px; }
+  .header p { font-size: 13px; opacity: 0.85; }
+
+  /* MAIN */
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .section { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+  h2 { color: #1B6B7B; font-size: 18px; margin-bottom: 16px; border-bottom: 2px solid #1B6B7B; padding-bottom: 8px; }
+  h3 { color: #444; font-size: 14px; margin: 20px 0 8px; }
+
+  /* ASSIGNMENTS */
+  .member { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+  .member-header { display: flex; align-items: center; margin-bottom: 12px; }
+  .member-name { font-size: 16px; font-weight: bold; color: #1B6B7B; }
+  .member-count { display: inline-block; background: #1B6B7B; color: white; font-size: 11px; font-weight: bold; padding: 3px 10px; border-radius: 10px; margin-left: 10px; }
+  .email-list { list-style: none; }
+  .email-list li { font-size: 13px; color: #444; padding: 6px 10px; margin: 3px 0; border-radius: 4px; display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #eee; }
+  .domain-tag { font-size: 10px; font-weight: bold; padding: 2px 7px; border-radius: 8px; min-width: 40px; text-align: center; }
+  .tag-com { background: #e8f4f6; color: #1B6B7B; }
+  .tag-mail { background: #e8f5e9; color: #2e7d32; }
+  .tag-hire { background: #fff3e0; color: #e65100; }
+  .tag-net { background: #f3e5f5; color: #6a1b9a; }
+
+  /* SUBJECT LINES */
+  .subject-item { background: #f9f9f9; border-left: 3px solid #1B6B7B; padding: 10px 14px; margin: 8px 0; border-radius: 3px; }
+  .subject-main { font-size: 13px; font-weight: bold; color: #1B6B7B; }
+  .subject-example { font-size: 12px; color: #888; margin-top: 4px; font-style: italic; }
+
+  /* TEMPLATES */
+  .template-box { background: #f9f9f9; border: 1px dashed #ccc; border-radius: 6px; padding: 15px; margin: 10px 0; font-size: 13px; color: #333; line-height: 1.8; white-space: pre-wrap; }
+  .subject-box { background: #e8f4f6; border-left: 3px solid #1B6B7B; padding: 8px 12px; border-radius: 3px; font-size: 13px; font-weight: bold; color: #1B6B7B; margin-bottom: 10px; }
+  .phrase-tag { display: inline-block; background: #e8f4f6; color: #1B6B7B; font-size: 11px; font-weight: bold; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+  .number { display: inline-block; background: #1B6B7B; color: white; border-radius: 50%; width: 22px; height: 22px; text-align: center; line-height: 22px; font-size: 12px; margin-right: 8px; }
+
+  /* AVOID TABLE */
+  .avoid-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .avoid-table th { background: #1B6B7B; color: white; padding: 8px 12px; text-align: left; }
+  .avoid-table td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+  .avoid-table tr:nth-child(even) { background: #f9f9f9; }
+  .tag-bad { color: #c0392b; font-weight: bold; }
+  .tag-good { color: #1B6B7B; font-weight: bold; }
+  .note { background: #fff8e1; border-left: 3px solid #f0a500; padding: 10px 14px; border-radius: 3px; font-size: 12px; color: #555; margin-top: 10px; }
+
+  /* SUMMARY TABLE */
+  .summary-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .summary-table th { background: #1B6B7B; color: white; padding: 8px 12px; text-align: left; }
+  .summary-table td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+  .summary-table tr:nth-child(even) { background: #f9f9f9; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Skillvanto Team Guide</h1>
+  <p>Email Assignments · Subject Lines · Templates · Words to Avoid</p>
+</div>
+
+<div class="nav">
+  <a href="#assignments">📧 Assignments</a>
+  <a href="#subjects">📝 Subject Lines</a>
+  <a href="#short">✉️ Short Templates</a>
+  <a href="#medium">📄 Medium Templates</a>
+  <a href="#followup">🔄 Follow Ups</a>
+  <a href="#avoid">⚠️ Words to Avoid</a>
+</div>
+
+<div class="container">
+
+<!-- ASSIGNMENTS -->
+<div class="section" id="assignments">
+  <h2>📧 Email Assignments</h2>
+  <p style="font-size:13px;color:#666;margin-bottom:16px;">Each person uses only their assigned email accounts. Mix of all domains included.</p>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Naveen</span><span class="member-count">5 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Sam.white@skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> megan@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> Ajay.reddy@skillvanto.net</li>
+      <li><span class="domain-tag tag-mail">.mail</span> Tyle.Scott@mail.skillvanto.com</li>
+      <li><span class="domain-tag tag-com">.com</span> jason.miller@skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Sneha</span><span class="member-count">5 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Sara.carter@Skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> ashley@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> Manisha.palli@skillvanto.net</li>
+      <li><span class="domain-tag tag-mail">.mail</span> ajay.reddy@mail.skillvanto.com</li>
+      <li><span class="domain-tag tag-com">.com</span> sophia.reed@skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Tejasri</span><span class="member-count">5 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Rick.Jones@skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> rachel@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> Harry.williams@skillvanto.net</li>
+      <li><span class="domain-tag tag-mail">.mail</span> Simon.Cole@mail.skillvanto.com</li>
+      <li><span class="domain-tag tag-com">.com</span> olivia.hayes@skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Tejaswini</span><span class="member-count">5 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> jessica.lane@skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> jacob@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> Grace.morgan@skillvanto.net</li>
+      <li><span class="domain-tag tag-mail">.mail</span> sara.carter@mail.skillvanto.com</li>
+      <li><span class="domain-tag tag-com">.com</span> hannah.scott@skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Bhanu</span><span class="member-count">5 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Vishnu@skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> natalie@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> Nathan.foster@skillvanto.net</li>
+      <li><span class="domain-tag tag-mail">.mail</span> Cynthia.Cooper@mail.skillvanto.com</li>
+      <li><span class="domain-tag tag-com">.com</span> adrian.marcus@skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Taylor</span><span class="member-count">4 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Harry@skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> lauren@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> madison.reed@skillvanto.net</li>
+      <li><span class="domain-tag tag-mail">.mail</span> sam.white@mail.skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Santhosh</span><span class="member-count">3 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Cynthia.cooper@Skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> mark@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-mail">.mail</span> harry@mail.skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Lokesh</span><span class="member-count">4 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> Max.Henry@Skillvanto.com</li>
+      <li><span class="domain-tag tag-hire">.hire</span> emma@hire.skillvanto.com</li>
+      <li><span class="domain-tag tag-net">.net</span> Rick.jones@skillvanto.net</li>
+      <li><span class="domain-tag tag-com">.com</span> ethan.brooks@skillvanto.com</li>
+    </ul>
+  </div>
+
+  <div class="member">
+    <div class="member-header"><span class="member-name">Aahlya</span><span class="member-count">2 emails</span></div>
+    <ul class="email-list">
+      <li><span class="domain-tag tag-com">.com</span> daniel.parker@skillvanto.com</li>
+      <li><span class="domain-tag tag-mail">.mail</span> Max@mail.skillvanto.com</li>
+    </ul>
+  </div>
+
+  <h3>Summary</h3>
+  <table class="summary-table">
+    <tr><th>Team Member</th><th>.com</th><th>.mail</th><th>.hire</th><th>.net</th><th>Total</th></tr>
+    <tr><td>Naveen</td><td>2</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+    <tr><td>Sneha</td><td>2</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+    <tr><td>Tejasri</td><td>2</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+    <tr><td>Tejaswini</td><td>2</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+    <tr><td>Bhanu</td><td>2</td><td>1</td><td>1</td><td>1</td><td>5</td></tr>
+    <tr><td>Taylor</td><td>1</td><td>1</td><td>1</td><td>1</td><td>4</td></tr>
+    <tr><td>Santhosh</td><td>1</td><td>1</td><td>1</td><td>0</td><td>3</td></tr>
+    <tr><td>Lokesh</td><td>2</td><td>0</td><td>1</td><td>1</td><td>4</td></tr>
+    <tr><td>Aahlya</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td></tr>
+    <tr style="font-weight:bold;background:#e8f4f6;"><td>Total</td><td>15</td><td>7</td><td>7</td><td>6</td><td>38</td></tr>
+  </table>
+</div>
+
+<!-- SUBJECT LINES -->
+<div class="section" id="subjects">
+  <h2>📝 Subject Lines</h2>
+  <p style="font-size:13px;color:#666;margin-bottom:16px;">Replace [Role] with the actual job title. Rotate — never use same subject twice to same person.</p>
+
+  <div class="subject-item"><div class="subject-main"><span class="number">1</span>[Role] – Candidate Referral</div><div class="subject-example">e.g. Physician – Candidate Referral | Pharmacist – Candidate Referral | LMSW – Candidate Referral</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">2</span>[Role] – Direct Hire Candidates</div><div class="subject-example">e.g. Clinical Therapist – Direct Hire Candidates | Dental Hygienist – Direct Hire Candidates</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">3</span>Qualified [Role] Candidates Available</div><div class="subject-example">e.g. Qualified Pharmacist Candidates Available | Qualified Physician Candidates Available</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">4</span>[Role] – Staffing Support</div><div class="subject-example">e.g. LMSW – Staffing Support | Pharmacy Tech – Staffing Support</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">5</span>Direct Hire – [Role] Candidates</div><div class="subject-example">e.g. Direct Hire – Dental Hygienist Candidates | Direct Hire – Social Worker Candidates</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">6</span>[Role] – Candidate Profiles</div><div class="subject-example">e.g. Pulmonologist – Candidate Profiles | Occupational Therapist – Candidate Profiles</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">7</span>[Role] – Direct Placement</div><div class="subject-example">e.g. Registered Nurse – Direct Placement | Social Worker – Direct Placement</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">8</span>Direct Hire Referral – [Role]</div><div class="subject-example">e.g. Direct Hire Referral – Physician | Direct Hire Referral – Clinical Therapist</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">9</span>[Role] – Qualified Candidates</div><div class="subject-example">e.g. Pharmacy Technician – Qualified Candidates | Physician – Qualified Candidates</div></div>
+  <div class="subject-item"><div class="subject-main"><span class="number">10</span>[Role] – Referral Candidates</div><div class="subject-example">e.g. BCBA – Referral Candidates | Medical Laboratory Scientist – Referral Candidates</div></div>
+
+  <div class="note">💡 Rule: Use a different subject line each time you email the same person.</div>
+</div>
+
+<!-- SHORT TEMPLATES -->
+<div class="section" id="short">
+  <h2>✉️ Short Templates</h2>
+  <p style="font-size:13px;color:#666;margin-bottom:16px;">3-4 lines. Quick and direct. Max 8 emails per template per day.</p>
+
+  <h3><span class="number">1</span>Short — Direct Placement <span class="phrase-tag">Direct Placement</span></h3>
+  <div class="subject-box">Subject: [Role] – Candidate Referral</div>
+  <div class="template-box">Hi [First Name],
+
+We are Skillvanto, a staffing company specializing in healthcare placements.
+
+We have a few qualified [Role] candidates available for direct placement — would you be interested in reviewing their profiles?</div>
+
+  <h3><span class="number">2</span>Short — Direct Hire <span class="phrase-tag">Direct Hire</span></h3>
+  <div class="subject-box">Subject: Direct Hire – [Role] Candidates</div>
+  <div class="template-box">Hi [First Name],
+
+We are Skillvanto, a healthcare staffing company focused on direct hire placements.
+
+We have a few [Role] candidates available — would you be open to reviewing their profiles?</div>
+
+  <h3><span class="number">3</span>Short — Direct Hire Referral <span class="phrase-tag">Direct Hire</span> <span class="phrase-tag">Referral</span></h3>
+  <div class="subject-box">Subject: Direct Hire Referral – [Role]</div>
+  <div class="template-box">Hi [First Name],
+
+We are Skillvanto, a staffing company currently working with qualified [Role] candidates available for direct hire referral.
+
+Please let me know if you would be interested in reviewing their profiles.</div>
+
+  <div class="note">💡 Never use the same template twice in one day. Rotate across all templates.</div>
+</div>
+
+<!-- MEDIUM TEMPLATES -->
+<div class="section" id="medium">
+  <h2>📄 Medium Templates</h2>
+  <p style="font-size:13px;color:#666;margin-bottom:16px;">5-6 lines. More detail with personal introduction.</p>
+
+  <h3><span class="number">4</span>Medium — Direct Hire <span class="phrase-tag">Direct Hire</span></h3>
+  <div class="subject-box">Subject: [Role] – Direct Hire Candidates</div>
+  <div class="template-box">Hi [First Name],
+
+I hope this message finds you well. I am reaching out from Skillvanto, a staffing company specializing in healthcare placements.
+
+We are currently working with qualified [Role] candidates who are available for direct hire and actively looking for their next opportunity.
+
+Would you be open to reviewing their profiles?</div>
+
+  <h3><span class="number">5</span>Medium — Referral <span class="phrase-tag">Referral</span></h3>
+  <div class="subject-box">Subject: [Role] – Referral Candidates</div>
+  <div class="template-box">Hi [First Name],
+
+My name is [Your Name] and I am contacting you from Skillvanto, a healthcare staffing company.
+
+We have a few qualified [Role] candidates available for referral who have relevant experience and are ready to interview.
+
+I wanted to check if you would be interested in reviewing their profiles — please let me know and I will send their details right away.</div>
+
+  <h3><span class="number">6</span>Medium — Direct Placement <span class="phrase-tag">Direct Placement</span></h3>
+  <div class="subject-box">Subject: Qualified [Role] Candidates Available</div>
+  <div class="template-box">Hi [First Name],
+
+My name is [Your Name] from Skillvanto, a staffing company specializing in healthcare placements.
+
+We are currently working with a few qualified [Role] candidates who are actively looking for direct placement opportunities.
+
+Would you be open to reviewing their profiles?</div>
+
+  <h3><span class="number">7</span>Medium — Direct Hire <span class="phrase-tag">Direct Hire</span></h3>
+  <div class="subject-box">Subject: [Role] – Direct Hire Candidates</div>
+  <div class="template-box">Hi [First Name],
+
+I am reaching out from Skillvanto, a healthcare staffing company focused on direct hire placements.
+
+We have qualified [Role] candidates with relevant experience currently available and ready to interview.
+
+Would you be interested in reviewing their profiles?</div>
+
+  <h3><span class="number">8</span>Medium — Referral <span class="phrase-tag">Referral</span></h3>
+  <div class="subject-box">Subject: [Role] – Candidate Referral</div>
+  <div class="template-box">Hi [First Name],
+
+My name is [Your Name] from Skillvanto, a staffing company specializing in healthcare placements.
+
+We have a few qualified [Role] candidates available for referral — all with relevant experience and ready to interview.
+
+Please let me know if you would like to review their profiles.</div>
+
+  <h3><span class="number">9</span>Medium — Direct Hire <span class="phrase-tag">Direct Hire</span></h3>
+  <div class="subject-box">Subject: [Role] – Staffing Support</div>
+  <div class="template-box">Hi [First Name],
+
+I am [Your Name] from Skillvanto, a healthcare staffing company specializing in direct hire.
+
+We are currently working with qualified [Role] candidates available and actively interviewing.
+
+Would you be open to reviewing a couple of their profiles?</div>
+
+  <h3><span class="number">10</span>Medium — Direct Placement + Referral <span class="phrase-tag">Direct Placement</span> <span class="phrase-tag">Referral</span></h3>
+  <div class="subject-box">Subject: [Role] – Candidate Profiles</div>
+  <div class="template-box">Hi [First Name],
+
+Reaching out from Skillvanto, a staffing company specializing in healthcare placements.
+
+We have a few qualified [Role] candidates available for direct placement referral — all with relevant experience in this field.
+
+Would you be interested in reviewing their profiles?</div>
+
+  <div class="note">💡 Never use the same template twice in one day. Rotate across all 10 templates.</div>
+</div>
+
+<!-- FOLLOW UP TEMPLATES -->
+<div class="section" id="followup">
+  <h2>🔄 Follow Up Templates</h2>
+
+  <h3>Day 3 — Follow Up Option 1</h3>
+  <div class="subject-box">Subject: Following up – [Role] Candidates</div>
+  <div class="template-box">Hi [First Name],
+
+Just following up on my previous email regarding [Role] candidates.
+
+We still have qualified candidates available for direct placement — please let me know if you would like to review their profiles.</div>
+
+  <h3>Day 3 — Follow Up Option 2</h3>
+  <div class="subject-box">Subject: [Role] Candidates – Follow Up</div>
+  <div class="template-box">Hi [First Name],
+
+Wanted to check if you had a chance to see my previous email about [Role] candidates available for direct hire referral.
+
+Happy to send profiles whenever works for you.</div>
+
+  <h3>Day 7 — Final Follow Up</h3>
+  <div class="subject-box">Subject: [Role] Candidates – Final Follow Up</div>
+  <div class="template-box">Hi [First Name],
+
+One last follow up regarding our [Role] candidates available for direct hire referral.
+
+Feel free to reach out anytime if you have future hiring needs.
+
+Have a great week!</div>
+</div>
+
+<!-- WORDS TO AVOID -->
+<div class="section" id="avoid">
+  <h2>⚠️ Words to Avoid vs Use</h2>
+  <table class="avoid-table">
+    <tr><th>❌ Never Use</th><th>✅ Use Instead</th></tr>
+    <tr><td class="tag-bad">Position – [Role] / Hiring – [Role]</td><td class="tag-good">[Role] – Candidate Referral</td></tr>
+    <tr><td class="tag-bad">I came across your opening</td><td class="tag-good">We have qualified [Role] candidates available</td></tr>
+    <tr><td class="tag-bad">I noticed you're currently looking to hire</td><td class="tag-good">We are currently working with qualified [Role] candidates</td></tr>
+    <tr><td class="tag-bad">could align with your requirements</td><td class="tag-good">Remove completely</td></tr>
+    <tr><td class="tag-bad">Kindly inform me</td><td class="tag-good">Please let me know / Would you be interested</td></tr>
+    <tr><td class="tag-bad">when you have some free time</td><td class="tag-good">Remove completely</td></tr>
+    <tr><td class="tag-bad">I believe / I think / In my opinion</td><td class="tag-good">State it directly</td></tr>
+    <tr><td class="tag-bad">Greetings / Good day</td><td class="tag-good">Hi [First Name]</td></tr>
+    <tr><td class="tag-bad">Thanks & Regards</td><td class="tag-good">Best</td></tr>
+    <tr><td class="tag-bad">Hi team</td><td class="tag-good">Always use first name</td></tr>
+    <tr><td class="tag-bad">End-to-End Hiring for</td><td class="tag-good">Remove completely</td></tr>
+  </table>
+</div>
+
+</div>
+</body>
+</html>
